@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Testing the installatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Allocating and displaying an image buffer", "02. Allocating and displaying an image buffer\02. Allocating and displaying an image buffer.csproj", "{E89B6315-B86F-493B-8294-E95E97AA9BBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Grabbing images", "03. Grabbing images\03. Grabbing images.csproj", "{8A34CB40-E743-4028-9A15-F9C1D32C292E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{E89B6315-B86F-493B-8294-E95E97AA9BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E89B6315-B86F-493B-8294-E95E97AA9BBE}.Release|x64.ActiveCfg = Release|Any CPU
 		{E89B6315-B86F-493B-8294-E95E97AA9BBE}.Release|x64.Build.0 = Release|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A34CB40-E743-4028-9A15-F9C1D32C292E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
