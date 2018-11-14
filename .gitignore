@@ -31,3 +31,16 @@
 *.out
 *.app
 *.pdb
+/.vs/MIL_TEST/v14/.suo
+/01. Testing the installation/bin/Debug
+/01. Testing the installation/obj/Debug
+/02. Allocating and displaying an image buffer/bin/Debug
+/02. Allocating and displaying an image buffer/obj/Debug
+/03. Grabbing images/bin/Debug
+/03. Grabbing images/obj/Debug
+/04. Steps to performing a typical application/bin/Debug
+/04. Steps to performing a typical application/obj/Debug
+/05. Erosion and dilation/bin/Debug
+/05. Erosion and dilation/obj/Debug
+/MIL_TEST_FORM/bin/Debug
+/MIL_TEST_FORM/obj/Debug
