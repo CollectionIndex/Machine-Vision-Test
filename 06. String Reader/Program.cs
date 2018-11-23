@@ -8,15 +8,33 @@ using System.Threading.Tasks;
 namespace String_Reader {
 	class Program :MIL {
 
-		private static string IMAGE_FILE_DEFINITION = M_IMAGE_PATH + "QcPlates.mim";
-		private static string IMAGE_FILE_TO_READ = M_IMAGE_PATH + "LicPlate.mim";
-
+		//private static string IMAGE_FILE_DEFINITION = M_IMAGE_PATH + "QcPlates.mim";
+		//private static string IMAGE_FILE_TO_READ = M_IMAGE_PATH + "LicPlate.mim";
 		//private const string TEXT_DEFINITION = "AVS300CVK781JNK278 EBX380QKN918HCC839 YRH900ZQR756977AMQ GPK742389EYE569ESQ";
-		private const string TEXT_DEFINITION = "AVS300CVK781JNK278 123456789012345678 ABCDEFGHIJKLMNOPQR STUVWXYZABCDEFGHIJ";
+
+		//private static string IMAGE_FILE_DEFINITION = "C:\\string_reader_definition.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\string_reader_read.bmp";
+		//private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz `1234567890-= ~!@#$%^&*()_+ [];,./{}|:<>?";
+
+		//private static string IMAGE_FILE_DEFINITION = "C:\\alphabet.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\string_reader_read.bmp";
+		//private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
+
+		//private static string IMAGE_FILE_DEFINITION = "C:\\upper.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		//private const string TEXT_DEFINITION = "ABCDEFGHI JKLMNOPQR STUVWXYZ";
+
+		//private static string IMAGE_FILE_DEFINITION = "C:\\lower.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		//private const string TEXT_DEFINITION = "abcdefghijklmnopqrstuvwxyz";
 
 
-		private static int NORMALIZATION_SIZE_Y = 20;
-		private static int STRING_MAX_SIZE = 32;
+		private static string IMAGE_FILE_DEFINITION = "C:\\upper lower2.bmp";
+		private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		private static int NORMALIZATION_SIZE_Y = 27;
+		private static int STRING_MAX_SIZE = 9999;
 
 		static void Main( string[] args ) {
 			MIL_ID MilApplication = M_NULL;
@@ -48,31 +66,33 @@ namespace String_Reader {
 
 			MstrControl( MilStrContext, M_CONTEXT, M_FONT_ADD, M_USER_DEFINED );
 
+			//MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_ADD, M_USER_DEFINED + M_FOREGROUND_BLACK, MilImage, TEXT_DEFINITION );
 			MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_ADD, M_USER_DEFINED + M_FOREGROUND_BLACK, MilImage, TEXT_DEFINITION );
 
 			MgraColor( M_DEFAULT, M_COLOR_GREEN );
 			MstrDraw( M_DEFAULT, MilStrContext, MilOverlayImage, M_DRAW_CHAR, M_FONT_INDEX( 0 ), M_NULL, M_ORIGINAL );
 
 			MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_NORMALIZE, M_SIZE_Y, NORMALIZATION_SIZE_Y, M_NULL, M_NULL );
+			//MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_NORMALIZE, M_SIZE_X, NORMALIZATION_SIZE_X, M_NULL, M_NULL );
 
 			MstrControl( MilStrContext, M_CONTEXT, M_STRING_ADD, M_USER_DEFINED );
-			MstrControl( MilStrContext, M_CONTEXT, M_STRING_ADD, M_USER_DEFINED );
+			//MstrControl( MilStrContext, M_CONTEXT, M_STRING_ADD, M_USER_DEFINED );
 
-			MstrControl( MilStrContext, M_CONTEXT, M_STRING_NUMBER, 1 );
+			MstrControl( MilStrContext, M_CONTEXT, M_STRING_NUMBER, M_ALL );
 
-			MstrControl( MilStrContext, M_STRING_INDEX( M_ALL ), M_STRING_SIZE_MIN, 6 );
-			MstrControl( MilStrContext, M_STRING_INDEX( M_ALL ), M_STRING_SIZE_MAX, 6 );
-
+			MstrControl( MilStrContext, M_STRING_INDEX( M_ALL ), M_STRING_SIZE_MIN, 1 );
+			MstrControl( MilStrContext, M_STRING_INDEX( M_ALL ), M_STRING_SIZE_MAX, 60 );
+			
 			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), M_DEFAULT, M_LETTER + M_UPPERCASE, M_NULL );
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), M_DEFAULT, M_LETTER + M_UPPERCASE, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), M_DEFAULT, M_LETTER + M_UPPERCASE, M_NULL );
 
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 3, M_DIGIT, M_NULL );
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 4, M_DIGIT, M_NULL );
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 5, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 3, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 4, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 0 ), 5, M_DIGIT, M_NULL );
 
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 0, M_DIGIT, M_NULL );
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 1, M_DIGIT, M_NULL );
-			MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 2, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 0, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 1, M_DIGIT, M_NULL );
+			//MstrSetConstraint( MilStrContext, M_STRING_INDEX( 1 ), 2, M_DIGIT, M_NULL );
 
 			Console.WriteLine( "This program has defined a font with this Quebec plates mosaic image." );
 			Console.WriteLine( "Press < Endter > to continue." );
