@@ -44,3 +44,6 @@
 /05. Erosion and dilation/obj/Debug
 /MIL_TEST_FORM/bin/Debug
 /MIL_TEST_FORM/obj/Debug
+*.suo
+*.cache
+Debug
