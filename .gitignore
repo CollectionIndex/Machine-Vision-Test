@@ -47,3 +47,4 @@
 *.suo
 *.cache
 Debug
+ipch

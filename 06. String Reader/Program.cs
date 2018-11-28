@@ -20,18 +20,22 @@ namespace String_Reader {
 		//private static string IMAGE_FILE_TO_READ = "C:\\string_reader_read.bmp";
 		//private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
 
-		//private static string IMAGE_FILE_DEFINITION = "C:\\upper.bmp";
-		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
-		//private const string TEXT_DEFINITION = "ABCDEFGHI JKLMNOPQR STUVWXYZ";
+		private static string IMAGE_FILE_DEFINITION = "C:\\upper.bmp";
+		private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		private const string TEXT_DEFINITION = "ABCDEFGHI JKLMNOPQR STUVWXYZ";
 
 		//private static string IMAGE_FILE_DEFINITION = "C:\\lower.bmp";
 		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
 		//private const string TEXT_DEFINITION = "abcdefghijklmnopqrstuvwxyz";
 
+		//private static string IMAGE_FILE_DEFINITION = "C:\\lower2.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		//private const string TEXT_DEFINITION = "Abcdefghijklmnopqrstuvwxyz";
 
-		private static string IMAGE_FILE_DEFINITION = "C:\\upper lower2.bmp";
-		private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
-		private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		//private static string IMAGE_FILE_DEFINITION = "C:\\upper lower2.bmp";
+		//private static string IMAGE_FILE_TO_READ = "C:\\upper.bmp";
+		//private const string TEXT_DEFINITION = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		private static int NORMALIZATION_SIZE_Y = 27;
 		private static int STRING_MAX_SIZE = 9999;
@@ -66,7 +70,6 @@ namespace String_Reader {
 
 			MstrControl( MilStrContext, M_CONTEXT, M_FONT_ADD, M_USER_DEFINED );
 
-			//MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_ADD, M_USER_DEFINED + M_FOREGROUND_BLACK, MilImage, TEXT_DEFINITION );
 			MstrEditFont( MilStrContext, M_FONT_INDEX( 0 ), M_CHAR_ADD, M_USER_DEFINED + M_FOREGROUND_BLACK, MilImage, TEXT_DEFINITION );
 
 			MgraColor( M_DEFAULT, M_COLOR_GREEN );
