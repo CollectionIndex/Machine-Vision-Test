@@ -48,3 +48,5 @@
 *.cache
 Debug
 ipch
+*.opendb
+*.db

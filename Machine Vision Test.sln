@@ -25,6 +25,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07. Text Detection with Ope
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08. Text Recognition with OpenCV CPP", "08. Text Recognition with OpenCV CPP\08. Text Recognition with OpenCV CPP.vcxproj", "{3666F7E9-9797-406C-BECC-EE02C94B9986}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09. OCR Test", "09. OCR Test\09. OCR Test.vcxproj", "{88F83007-DB29-495D-A6FD-9281602D866C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,6 +122,7 @@ Global
 		{28F5E6F9-8C1A-46B8-A4AC-0D7FC8C03C23}.Release|x86.ActiveCfg = Release|Any CPU
 		{28F5E6F9-8C1A-46B8-A4AC-0D7FC8C03C23}.Release|x86.Build.0 = Release|Any CPU
 		{F5A5A9AD-A516-469F-A313-BEB413D00401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A5A9AD-A516-469F-A313-BEB413D00401}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5A5A9AD-A516-469F-A313-BEB413D00401}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{F5A5A9AD-A516-469F-A313-BEB413D00401}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{F5A5A9AD-A516-469F-A313-BEB413D00401}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -137,6 +140,7 @@ Global
 		{F86151DD-4802-410B-85F4-8D961E2A287D}.Release|x86.ActiveCfg = Release|Win32
 		{F86151DD-4802-410B-85F4-8D961E2A287D}.Release|x86.Build.0 = Release|Win32
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Debug|Any CPU.Build.0 = Debug|Win32
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Debug|x64.ActiveCfg = Debug|x64
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Debug|x64.Build.0 = Debug|x64
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Debug|x86.ActiveCfg = Debug|Win32
@@ -147,6 +151,7 @@ Global
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Release|x86.ActiveCfg = Release|Win32
 		{C5F74596-941B-406D-9EBB-F836D60E3C3A}.Release|x86.Build.0 = Release|Win32
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Debug|Any CPU.Build.0 = Debug|Win32
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Debug|x64.ActiveCfg = Debug|x64
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Debug|x64.Build.0 = Debug|x64
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Debug|x86.ActiveCfg = Debug|Win32
@@ -156,6 +161,17 @@ Global
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Release|x64.Build.0 = Release|x64
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Release|x86.ActiveCfg = Release|Win32
 		{3666F7E9-9797-406C-BECC-EE02C94B9986}.Release|x86.Build.0 = Release|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|Any CPU.Build.0 = Debug|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|x64.ActiveCfg = Debug|x64
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|x64.Build.0 = Debug|x64
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|x86.ActiveCfg = Debug|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Debug|x86.Build.0 = Debug|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Release|Any CPU.ActiveCfg = Release|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Release|x64.ActiveCfg = Release|x64
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Release|x64.Build.0 = Release|x64
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Release|x86.ActiveCfg = Release|Win32
+		{88F83007-DB29-495D-A6FD-9281602D866C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
