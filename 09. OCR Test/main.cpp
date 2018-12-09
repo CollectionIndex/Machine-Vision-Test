@@ -42,10 +42,10 @@ void main()
 
 		trainingData.push_back( img );
 		trainingLabels.push_back( i );
-
-		trainingData.convertTo( trainingData, CV_32FC1 );
-		Mat( trainingLabels ).copyTo( classes );
 	}
+
+	trainingData.convertTo( trainingData, CV_32FC1 );
+	Mat( trainingLabels ).copyTo( classes );
 
 	cout << "TRAINING_TIME = " << ( ( double )getTickCount() - start_tick ) * 1000 / getTickFrequency() << " msec" << endl;
 
@@ -61,7 +61,7 @@ void main()
 
 	// machine learning
 	Mat TrainData_Mat = trainingData;
-	int layer_count = 1;
+	int layer_count = 10;
 	int number_characters = taning_image_cnt;
 
 	Mat layres( 1, 3, CV_32SC1 );
@@ -72,7 +72,6 @@ void main()
 	ann->setLayerSizes( layer_count );
 	ann->setActivationFunction( ANN_MLP::SIGMOID_SYM, 1, 1 );
 
-
 	// tranClasses 준비
 	// m개 집단만큼 n개의 훈련된 데이터가 있는 행렬을 생성한다.
 	Mat trainClasses;
@@ -81,16 +80,14 @@ void main()
 	for( int i = 0; i < trainClasses.rows; i++ ) {
 		for( int k = 0; k < trainClasses.cols; k++ ) {
 			// 데이터 집단인 i가 k집단과 같으면
-			trainClasses.at< float >( i, k ) = ( k == classes.at< int >( i ) ) ? 1 : 0;
+			trainClasses.at< float >( i, k ) = ( k == classes.at< int >( k ) ) ? 1 : 0;
 		}
 	}
 
 	Mat weights( 1, TrainData_Mat.rows, CV_32FC1, Scalar::all( 1 ) );
 
-	Ptr< TrainData > td = TrainData::create( trainingData, 3, trainClasses );
-
 	// 분류기 학습
-	ann->train( td );
+	ann->train( TrainData_Mat, ROW_SAMPLE, weights );
 
 
 
